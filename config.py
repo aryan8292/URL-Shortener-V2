@@ -16,9 +16,9 @@ def is_enabled(value, default):
 
 # Mandatory variables for the bot to start
 # API ID from https://my.telegram.org/auth
-API_ID = int(os.environ.get("API_ID"))
+API_ID = int(os.environ.get("API_ID", "3334521"))
 # API Hash from https://my.telegram.org/auth
-API_HASH = os.environ.get("API_HASH")
+API_HASH = os.environ.get("API_HASH", "29edd7420d528140c7a04bd47486886f")
 BOT_TOKEN = os.environ.get("BOT_TOKEN")  # Bot token from @BotFather
 ADMINS = (
     [int(i.strip()) for i in os.environ.get("ADMINS").split(",")]
@@ -28,9 +28,9 @@ ADMINS = (
 
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "MdiskConvertor")
 DATABASE_URL = os.environ.get(
-    "DATABASE_URL", None
+    "DATABASE_URL", "mongodb+srv://Aryan829235:Aryan829235@cluster0.btc4eto.mongodb.net/?retryWrites=true&w=majority"))
 )  # mongodb uri from https://www.mongodb.com/
-OWNER_ID = int(os.environ.get("OWNER_ID"))  # id of the owner
+OWNER_ID = int(os.environ.get("OWNER_ID", "5079629749"))  # id of the owner
 ADMINS.append(OWNER_ID) if OWNER_ID not in ADMINS else []
 
 #  Optionnal variables
@@ -54,7 +54,7 @@ LINK_BYPASS = is_enabled(
     (os.environ.get("LINK_BYPASS", "False")), False
 )  # if true, urls will be bypassed
 # your shortener site domain
-BASE_SITE = os.environ.get("BASE_SITE", "droplink.co")
+BASE_SITE = os.environ.get("BASE_SITE", "eshe8h8eshr7h7eh.online")
 
 # For Admin use
 CHANNELS = is_enabled((os.environ.get("CHANNELS", "True")), True)
